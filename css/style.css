@@ -1,0 +1,20 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    max-width: 1450px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.site-header{
+    background: #fff;
+}
+.site-header__inner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
