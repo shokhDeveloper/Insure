@@ -4,6 +4,7 @@ window.addEventListener("load", () => {
     const sitenav = document.querySelector(".sitenav")
     const burgerImage = document.querySelector(".burger-image")
     const herotext = document.querySelector(".hero-text")
+    const header = document.querySelector("header")
     let text =  "Get your life insurance coverage easier and faster. We blend our expertise and technology to help you find the plan thats right for you. Ensure you and your loved ones are protected."
     const handleClick = () => {
         sitenav.classList.toggle("active")
@@ -15,13 +16,17 @@ window.addEventListener("load", () => {
     }
     burger.addEventListener("click", handleClick)   
     window.addEventListener("scroll" , () => {
-        console.log(window.scrollY)
         if(window.matchMedia("(max-width: 500px")  && window.scrollY > 0 && window.scrollY < 200){
             if(text.split(" ").length > 20){
                 herotext.innerHTML = `${text.split(" ").slice(0, 10).join(" ")}  <span class="text-to"> ... </span> `
             }
         }else{
             return false
+        }
+        if(window.scrollY > 80){
+            header.classList.add("active-header")
+        }else{
+            header.classList.remove("active-header")
         }
     })
     const handleClickWindow = (event) => {

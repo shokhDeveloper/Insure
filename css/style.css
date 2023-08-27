@@ -45,6 +45,7 @@ body{
     top: 0;
     padding: 10px 0px;
     z-index: 9999999;
+    transition: 0.5s ease all;
 }
 .site-header__inner{
     display: flex;
@@ -621,4 +622,18 @@ footer{
     .hero-inner-media-image{
         background-position: calc(50%) calc(0%) ;
     }
+}
+.active-header{
+    background: grey;
+    color: #fff;
+}
+.active-header .sitenav .sitenav__list .sitenav__link{
+    color: #fff;
+}
+.active-header a:nth-child(1) img{
+    filter: invert(1);
+}
+.active-header .sitenav .view-plans-btn{
+    background: #2C2830;
+    color: #fff;
 }
